@@ -112,8 +112,5 @@ class FluentSender(sender.FluentSender):
         finally:
             self._close()
 
-    def _queue_overflow_handler_default(self, discarded_bytes):
-        pass
-
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.close()
